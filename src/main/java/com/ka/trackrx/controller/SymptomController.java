@@ -34,4 +34,14 @@ public class SymptomController {
 		symptomLogService.deleteById(id);
 		return "redirect:/symptoms";
 	}
+
+	@GetMapping("/search")
+	public String search(@RequestParam String query, Model model) {
+		// TODO integrate Flowise API call to analyze symptom and set aiInsight
+		// For now, search existing symptoms by name
+		model.addAttribute("symptoms", symptomLogService.findBySymptomContaining(query));
+		model.addAttribute("symptomLog", new SymptomLog());
+		model.addAttribute("searchQuery", query);
+		return "symptoms";
+	}
 }

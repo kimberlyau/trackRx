@@ -5,6 +5,9 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+# Environment properties
+.env
+
 # IntelliJ IDEA
 .idea/
 *.iws
@@ -128,11 +131,6 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-
-# Application specific
-application-local.properties
-application-dev.properties
-application-prod.properties
 
 # Database
 *.db

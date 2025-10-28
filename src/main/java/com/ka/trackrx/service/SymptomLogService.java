@@ -21,4 +21,7 @@ public class SymptomLogService {
 		return symptomLogRepository.save(log);
 	}
 	public void deleteById(Long id) { symptomLogRepository.deleteById(id); }
+	public List<SymptomLog> findBySymptomContaining(String query) {
+		return symptomLogRepository.findBySymptomContainingIgnoreCase(query);
+	}
 }

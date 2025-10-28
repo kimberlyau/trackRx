@@ -1,0 +1,113 @@
+/* TrackRx - Pill Bottle Theme */
+
+/* Main background - pill bottle orange */
+body {
+    background-color: #d59422d1; /* Orange background */
+    min-height: 100vh;
+}
+
+/* White navbar with border */
+.navbar {
+    background-color: white !important;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Dark text for navbar links */
+.navbar-nav .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff8c00 !important;
+}
+
+/* Brand styling */
+.navbar-brand {
+    color: #333 !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Cards with white background for contrast */
+.card {
+    background-color: white;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    font-weight: 600;
+    color: #333;
+}
+
+/* List items styling */
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* Container adjustments */
+.container {
+    background-color: transparent;
+}
+
+/* Button styling to match theme */
+.btn-primary {
+    background-color: #ff8c00;
+    border-color: #ff8c00;
+}
+
+.btn-primary:hover {
+    background-color: #e67e00;
+    border-color: #e67e00;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+/* Form controls */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.form-control:focus {
+    border-color: #ff8c00;
+    box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25);
+}
+
+/* Table styling */
+.table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+}
