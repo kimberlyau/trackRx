@@ -24,4 +24,11 @@ public class SymptomLogService {
 	public List<SymptomLog> findBySymptomContaining(String query) {
 		return symptomLogRepository.findBySymptomContainingIgnoreCase(query);
 	}
+
+	public String analyzeSymptoms(String query) {
+		// TODO integrate Flowise API call here
+		// Example (future): POST http://localhost:3000/api/v1/prediction/<flow-id>
+		// with payload containing the query
+		return "AI analysis will appear here once Flowise is integrated.";
+	}
 }

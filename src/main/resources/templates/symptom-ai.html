@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>TrackRx - Dashboard</title>
+	<title>Symptom Analysis - TrackRx</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/style.css" rel="stylesheet">
 </head>
@@ -23,42 +23,29 @@
 		</div>
 	</div>
 </nav>
+
 <div class="container py-4">
-    <h1 class="mb-4 text-center">How are you feeling today?</h1>
-	<!-- Symptom Search Bar -->
-	<div class="row mb-5">
-		<div class="col-md-8 mx-auto">
+	<div class="row mb-4">
+		<div class="col-md-10 mx-auto">
 			<div class="card">
 				<div class="card-body">
-					<form method="get" action="/symptoms/ai" class="d-flex">
-						<input type="text" class="form-control me-2" name="query" placeholder="Enter symptoms to analyze..." required>
-						<button type="submit" class="btn btn-primary">Analyze</button>
-					</form>
+					<h3 class="card-title mb-3">Symptom Analysis</h3>
+					<p class="text-muted mb-2">Query</p>
+					<div class="p-3 bg-light rounded mb-4" th:text="${query}">Headache and nausea</div>
+
+					<p class="text-muted mb-2">AI Response</p>
+					<div class="p-3 bg-white border rounded" th:text="${aiResponse}">AI analysis will appear here once Flowise is integrated.</div>
+
+					<div class="mt-4 d-flex gap-2">
+						<a href="/" class="btn btn-secondary">Back to Dashboard</a>
+						<a href="/symptoms" class="btn btn-outline-secondary">View Symptoms</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	<h2 class="mt-5 mb-4">Dashboard</h2>
-	<div class="row g-4">
-		<div class="col-md-6">
-			<div class="card">
-				<div class="card-header">Recent Medications</div>
-				<ul class="list-group list-group-flush">
-					<li class="list-group-item" th:each="m : ${recentMedications}" th:text="${m.name} + ' - ' + ${m.dosage}">Sample</li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-md-6">
-			<div class="card">
-				<div class="card-header">Recent Symptoms</div>
-				<ul class="list-group list-group-flush">
-					<li class="list-group-item" th:each="s : ${recentSymptoms}" th:text="${s.date} + ': ' + ${s.symptom}">Sample</li>
-				</ul>
-			</div>
-		</div>
-	</div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

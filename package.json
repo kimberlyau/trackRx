@@ -1,0 +1,23 @@
+{
+  "name": "trackrx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimberlyau/trackRx.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimberlyau/trackRx/issues"
+  },
+  "homepage": "https://github.com/kimberlyau/trackRx#readme",
+  "dependencies": {
+    "flowise": "^3.0.8"
+  }
+}
